@@ -24,11 +24,12 @@ namespace BenchmarkDotNetApplicaltion.Alogorithms
             {
                 if (arr[mid] > key)
                 {
-                    return Search(key, arr, low, mid);
+
+                    return Search(key, arr, low, mid - 1);
                 }
                 else
                 {
-                    return Search(key, arr, mid, high);
+                    return Search(key, arr, mid + 1, high);
                 }
             }
         }
